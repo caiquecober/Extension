@@ -1,7 +1,7 @@
 """eia OpenBB Platform Provider."""
 
 from openbb_core.provider.abstract.provider import Provider
-from eia.models.example import ExampleFetcher
+from eia.models.example import EIAFetcher
 
 # mypy: disable-error-code="list-item"
 
@@ -15,6 +15,6 @@ provider = Provider(
     # Here, we list out the fetchers showing what our provider can get.
     # The dictionary key is the fetcher's name, used in the `router.py`.
     fetcher_dict={
-        "dataseries": dataseries,
+        "dataseries": EIAFetcher,
     }
 )
